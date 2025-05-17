@@ -2,6 +2,7 @@ _target_: agent.AgentConfig
 
 denoiser:
   _target_: models.diffusion.DenoiserConfig
+  noise_conditioning: false
   sigma_data: 0.5
   sigma_offset_noise: 0.3
   inner_model:
