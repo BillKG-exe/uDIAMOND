@@ -180,8 +180,8 @@ class Trainer(StateDictMixin):
             rl_env = WorldModelEnv(self.agent.denoiser, self.agent.rew_end_model, dl_actor_critic, wm_env_cfg)
 
             if cfg.training.compile_wm:
-                rl_env.predict_next_obs = torch.compile(rl_env.predict_next_obs, mode="reduce-overhead")
-                rl_env.predict_rew_end = torch.compile(rl_env.predict_rew_end, mode="reduce-overhead")
+                rl_env.predict_next_obs = torch.compile(rl_env.predict_next_obs, mode="reduce-overhead", backend="eager")
+                rl_env.predict_rew_end = torch.compile(rl_env.predict_rew_end, mode="reduce-overhead", backend="eager")
 
         # Setup training
         sigma_distribution_cfg = instantiate(cfg.denoiser.sigma_distribution)

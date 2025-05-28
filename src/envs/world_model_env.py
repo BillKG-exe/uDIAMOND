@@ -100,7 +100,8 @@ class WorldModelEnv:
             next_obs,
             (self.hx_rew_end, self.cx_rew_end),
         )
-        rew = Categorical(logits=logits_rew).sample().squeeze(1) - 1.0  # in {-1, 0, 1}
+        # rew = Categorical(logits=logits_rew).sample().squeeze(1) - 1.0  # in {-1, 0, 1}
+        rew = Categorical(logits=logits_rew.clone()).sample().squeeze(1) - 1.0
         end = Categorical(logits=logits_end).sample().squeeze(1)
         return rew, end
 
