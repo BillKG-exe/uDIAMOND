@@ -1,7 +1,7 @@
 train:
   id: BreakoutNoFrameskip-v4
   done_on_life_loss: True
-  size: 64
+  size: 32
   max_episode_steps: null
   
 test:
