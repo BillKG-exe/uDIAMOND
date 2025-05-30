@@ -80,7 +80,9 @@ def prepare_play_mode(cfg: DictConfig, args: argparse.Namespace) -> Tuple[PlayEn
         cfg.env.train.id = cfg.env.test.id = f"{name}NoFrameskip-v4"
         cfg.world_model_env.horizon = 50
     else:
-        path_ckpt = get_path_agent_ckpt("checkpoints", epoch=-1)
+        # path_ckpt = get_path_agent_ckpt("checkpoints", epoch=-1)
+        path_ckpt = Path("/kaggle/input/agent_u/pytorch/default/1/agent_epoch_00140.pt")
+
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
