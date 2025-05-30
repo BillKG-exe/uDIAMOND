@@ -35,10 +35,10 @@ collection:
   train:
     num_envs: 1
     epsilon: 0.01
-    num_steps_total: 100000
+    num_steps_total: 10000
     first_epoch:
-      min: 5000
-      max: 10000  # null: no maximum
+      min: 500
+      max: 1000  # null: no maximum
       threshold_rew: 10
     steps_per_epoch: 100
   test:
@@ -83,10 +83,10 @@ denoiser:
   training:
     num_autoregressive_steps: 1
     start_after_epochs: 0
-    steps_first_epoch: 10000
-    steps_per_epoch: 400
+    steps_first_epoch: 1000
+    steps_per_epoch: 20
     sample_weights: [0.1, 0.1, 0.1, 0.7]
-    batch_size: 32
+    batch_size: 16
     grad_acc_steps: 1
     lr_warmup_steps: 100
     max_grad_norm: 1.0
@@ -107,10 +107,10 @@ rew_end_model:
   training:
     seq_length: ${eval:'${world_model_env.horizon} + ${agent.denoiser.inner_model.num_steps_conditioning}'}
     start_after_epochs: 0
-    steps_first_epoch: 10000
-    steps_per_epoch: 400
+    steps_first_epoch: 1000
+    steps_per_epoch: 20
     sample_weights: ${denoiser.training.sample_weights}
-    batch_size: 32
+    batch_size: 16
     grad_acc_steps: 1
     lr_warmup_steps: 100
     max_grad_norm: 100.0
@@ -123,11 +123,11 @@ rew_end_model:
 actor_critic:
   training:
     sample_weights: ${denoiser.training.sample_weights}
-    batch_size: 32
+    batch_size: 16
     grad_acc_steps: 1
     start_after_epochs: 0
-    steps_first_epoch: 5000
-    steps_per_epoch: 400
+    steps_first_epoch: 500
+    steps_per_epoch: 20
     lr_warmup_steps: 100
     max_grad_norm: 100.0
 
