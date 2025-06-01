@@ -8,13 +8,12 @@ from pathlib import Path
 # For this example, we'll hardcode a subset or the full list for demonstration.
 # Full list is available in src/utils.py
 ATARI_GAMES_NAMES = [
-    "Alien", "Amidar", 
-    "Boxing", "Breakout", 
-    "Freeway","Jamesbond", "KungFuMaster", "MsPacman", "Pong",
-    "RoadRunner"]
+    "Alien"]
+
+#"Amidar", "Freeway","Jamesbond", "KungFuMaster", "MsPacman", "Pong","RoadRunner"
 
 # Define the number of runs per game
-NUM_RUNS_PER_GAME = 3
+NUM_RUNS_PER_GAME = 1
 
 # Define the device to use (e.g., 0 for GPU 0, or 'cpu')
 DEVICE = 0 # Or 'cpu', or a list like [0, 1] for multiple GPUs if supported by your setup
