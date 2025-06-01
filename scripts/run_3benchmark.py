@@ -49,7 +49,7 @@ for game_name in ATARI_GAMES_NAMES:
             str(MAIN_SCRIPT),
             f"env.train.id={game_id}",
             f"common.seed={seed}",
-            f"common.devices={DEVICE}"
+            f"env.train.num_envs=8"
         ]
 
         try:
