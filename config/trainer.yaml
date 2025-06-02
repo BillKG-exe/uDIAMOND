@@ -9,8 +9,8 @@ hydra:
 
 wandb:
   mode: online
-  project: diamond_training
-  entity: btouattara
+  project: diamond
+  entity: btouattara-uc-davis
   name: breakout-exp-1
   group: null
   tags: null
