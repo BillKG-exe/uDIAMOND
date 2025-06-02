@@ -22,15 +22,7 @@ import wandb
 
 ATARI_100K_GAMES = [
     "Alien", 
-    "Amidar", 
-    "Boxing", 
-    "Breakout",
-    "Freeway", 
-    "Jamesbond", 
-    "KungFuMaster", 
-    "MsPacman", 
-    "Pong", 
-    "RoadRunner", 
+   # "Amidar",  "Boxing",  "Breakout", "Freeway",  "Jamesbond",  "KungFuMaster",  "MsPacman", "Pong",  "RoadRunner", 
 ]
 
 
