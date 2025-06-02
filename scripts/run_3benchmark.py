@@ -19,7 +19,7 @@ NUM_RUNS_PER_GAME = 1
 DEVICE = 0 # Or 'cpu', or a list like [0, 1] for multiple GPUs if supported by your setup
 
 # Base command to run the main training script
-MAIN_SCRIPT = Path("src/main.py")
+MAIN_SCRIPT = Path("src/play.py")
 
 if not MAIN_SCRIPT.exists():
     print(f"Error: Could not find {MAIN_SCRIPT}. Make sure you run this script from the root of the uDIAMOND project.")
