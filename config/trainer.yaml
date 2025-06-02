@@ -8,10 +8,10 @@ hydra:
     chdir: True
 
 wandb:
-  mode: disabled
-  project: null
-  entity: null
-  name: null
+  mode: online
+  project: diamond_training
+  entity: btouattara
+  name: breakout-exp-1
   group: null
   tags: null
   notes: null
