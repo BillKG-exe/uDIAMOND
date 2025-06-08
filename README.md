@@ -10,7 +10,7 @@ imagined rollouts.
 ## What This Notebook Does
 
 1. **Clones the uDIAMOND repository**:
-   - Repository: (https://github.com/BillKG-exe/uDIAMOND)[https://github.com/BillKG-exe/uDIAMOND]
+   - Repository: [https://github.com/BillKG-exe/uDIAMOND](https://github.com/BillKG-exe/uDIAMOND)
 
 2. **Installs required dependencies**, including:
    - `torch`, `gym`, `gymnasium[atari]`, `wandb`, `hydra-core`, `torcheval`
@@ -50,6 +50,6 @@ their GPU T4 x 2. The training resulted in about 1 hour for 140. Training it on
 the orginal number of epochs as DIAMOND(1000 epochs) will take couple days.
 
 ## Note
-uDIAMOND is a variation of the DIAMOND model from (Diffusion for World Modeling:
-Visual Details Matter in Atari)[https://github.com/eloialonso/diamond]. The 
+uDIAMOND is a variation of the DIAMOND model from [Diffusion for World Modeling:  
+Visual Details Matter in Atari](https://github.com/eloialonso/diamond). The 
 uDiamond model implements DIAMOND without noise conditioning.
