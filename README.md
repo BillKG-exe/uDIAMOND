@@ -10,7 +10,7 @@ imagined rollouts.
 ## What This Notebook Does
 
 1. **Clones the uDIAMOND repository**:
-   - Repository: [https://github.com/BillKG-exe/uDIAMOND](https://github.com/BillKG-exe/uDIAMOND)
+   - Repository: (https://github.com/BillKG-exe/uDIAMOND)[https://github.com/BillKG-exe/uDIAMOND]
 
 2. **Installs required dependencies**, including:
    - `torch`, `gym`, `gymnasium[atari]`, `wandb`, `hydra-core`, `torcheval`
