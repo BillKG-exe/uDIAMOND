@@ -1,4 +1,4 @@
-# DIAMOND Agent Training Notebook
+# uDIAMOND Agent Training Notebook
 
 This notebook sets up and runs the training loop for both DIAMOND or uDIAMOND
 model as part of our project. The goal is to evaluate how noise conditioning
@@ -48,3 +48,8 @@ Running this notebook on a CPU-only environment is not recommended and will
 result in extremely slow training. We used Kaggle to run our notebook using
 their GPU T4 x 2. The training resulted in about 1 hour for 140. Training it on
 the orginal number of epochs as DIAMOND(1000 epochs) will take couple days.
+
+## Note
+uDIAMOND is a variation of the DIAMOND model from (Diffusion for World Modeling:
+Visual Details Matter in Atari)[https://github.com/eloialonso/diamond]. The 
+uDiamond model implements DIAMOND without noise conditioning.
